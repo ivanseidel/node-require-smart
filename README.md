@@ -78,7 +78,7 @@ controllers
 
 You will get an object required like this:
 
-```json
+```javascript
 {
   users: {
     ... require('./users/index'), [ Gets Merged ]
