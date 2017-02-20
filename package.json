@@ -1,0 +1,31 @@
+{
+  "name": "slick-load",
+  "version": "1.0.2",
+  "description": "Slicky load your dependencies based on their name and folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanseidel/slick-load.git"
+  },
+  "keywords": [
+    "autoload",
+    "autoloader",
+    "loader",
+    "require",
+    "deep",
+    "automatic",
+    "load"
+  ],
+  "author": "Ivan Seidel Gomes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanseidel/slick-load/issues"
+  },
+  "homepage": "https://github.com/ivanseidel/slick-load#readme",
+  "devDependencies": {
+    "chalk": "^1.1.3"
+  }
+}
