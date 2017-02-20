@@ -15,7 +15,7 @@ module.exports = [
 
 // Test if conversion of path to array is correct
 function pathNodesForFile() {
-  let tests = {
+  var tests = {
     '': [],
     'index.js': [],
     'some.path.js': ['some', 'path'],
@@ -25,10 +25,10 @@ function pathNodesForFile() {
   }
 
   // Test each case
-  for (let input in tests) {
-    let expectedOutput = tests[input]
+  for (var input in tests) {
+    var expectedOutput = tests[input]
 
-    let pathNodes = SlickLoad.utils.pathNodesForFile(input)
+    var pathNodes = SlickLoad.utils.pathNodesForFile(input)
 
     assert.deepEqual(expectedOutput, pathNodes)
   }
@@ -38,10 +38,10 @@ function pathNodesForFile() {
 function listFilesFromPath() {
   const folder = path.join(__dirname, 'testFolder')
 
-  let files = SlickLoad.utils.listFilesFromPath(folder)
+  var files = SlickLoad.utils.listFilesFromPath(folder)
 
   // Expected files
-  let expected = [
+  var expected = [
     'a.js',
     'b.js',
     'c.json',
@@ -58,17 +58,17 @@ function listFilesFromPath() {
 function listFoldersFromPath() {
   const folder = path.join(__dirname, 'testFolder')
 
-  let folders = SlickLoad.utils.listFoldersFromPath(folder)
+  var folders = SlickLoad.utils.listFoldersFromPath(folder)
 
   // Expected files
-  let expected = ['a', 'nested']
+  var expected = ['a', 'nested']
   
   assert.deepEqual(folders.sort(), expected.sort())
 }
 
 // Check if sanitization is ok
 function sanitizeName() {
-  let tests = {
+  var tests = {
     'some-name.js': 'someName.js',
     'some_other-name weird.js': 'someOtherNameWeird.js',
     'some.untrimmed    string.js': 'some.untrimmedString.js',
@@ -76,10 +76,10 @@ function sanitizeName() {
   }
 
   // Test each case
-  for (let input in tests) {
-    let expectedOutput = tests[input]
+  for (var input in tests) {
+    var expectedOutput = tests[input]
 
-    let sanitized = SlickLoad.utils.sanitizeName(input)
+    var sanitized = SlickLoad.utils.sanitizeName(input)
 
     // Compare outputs
     assert(expectedOutput, sanitized)
@@ -88,7 +88,7 @@ function sanitizeName() {
 
 // Check if sanitization is ok
 function fileName() {
-  let tests = {
+  var tests = {
     'js': 'js',
     'somefile.js': 'somefile',
     'somefile.json': 'somefile',
@@ -98,10 +98,10 @@ function fileName() {
   }
 
   // Test each case
-  for (let input in tests) {
-    let expectedOutput = tests[input]
+  for (var input in tests) {
+    var expectedOutput = tests[input]
 
-    let fileName = SlickLoad.utils.fileName(input)
+    var fileName = SlickLoad.utils.fileName(input)
 
     // Compare outputs
     assert(expectedOutput, fileName)

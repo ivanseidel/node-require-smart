@@ -2,10 +2,11 @@
 
 const chalk = require('chalk')
 
-const tests = [
-  ... require('./tests.utils'),
-  ... require('./tests.load'),
-]
+const tests = [].concat(
+  require('./tests.view'),
+  require('./tests.utils'),
+  require('./tests.load')
+)
 
 // Run tests
 var allTestsOk = true
@@ -35,7 +36,9 @@ function executeTest (test) {
   }
 }
 
-function showTestError(testName, retVal = '') {
+function showTestError(testName, retVal) {
+  retVal = retVal || ''
+
   console.log(chalk.red(` ✕  ${testName}`))
     
   // Format lines in indentation

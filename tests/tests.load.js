@@ -15,10 +15,10 @@ function testIfLoadsFilesFromFolder() {
   const folder = path.join(__dirname, 'testFolder')
 
   // Load tree
-  let loaded = SlickLoad(folder)
+  var loaded = SlickLoad(folder)
 
   // Expectation of result
-  let expectation = {
+  var expectation = {
     root: true,
     a: {
       index: true,
@@ -55,7 +55,7 @@ function testIfLoadsFilesFromFolder() {
 
 // Check listing from directory
 function setPropertySucceeds() {
-  let root = {}
+  var root = {}
 
   // Set root
   SlickLoad.loader.setProperty(root, [], {a: 1, b: 2, c: 3})
@@ -69,7 +69,7 @@ function setPropertySucceeds() {
   SlickLoad.loader.setProperty(root, ['g'], {value: 9})
 
   // Expectation of result
-  let expectation = {
+  var expectation = {
     a: 1,
     b: 2,
     c: 3,
@@ -95,9 +95,9 @@ function setPropertySucceeds() {
 
 // Check if it throws exception if cannot merge
 function setPropertyWithoutMergeEnabled() {
-  let root = {}
-  let opts = {canMerge: false}
-  let expectedError = /Cannot load into/
+  var root = {}
+  var opts = {canMerge: false}
+  var expectedError = /Cannot load into/
 
   // Set root should fail, because it needs to merge
   assert.throws( () => {
