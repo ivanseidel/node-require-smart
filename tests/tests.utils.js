@@ -61,7 +61,7 @@ function listFoldersFromPath() {
   var folders = RequireSmart.utils.listFoldersFromPath(folder)
 
   // Expected files
-  var expected = ['a', 'nested']
+  var expected = ['a', 'nested', 'multipath.folder-name']
   
   assert.deepEqual(folders.sort(), expected.sort())
 }

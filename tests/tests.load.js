@@ -47,6 +47,9 @@ function testIfLoadsFilesFromFolder() {
       weirdName: {
         test: true
       }
+    },
+    multipath: {
+      folderName: true,
     }
   }
 
