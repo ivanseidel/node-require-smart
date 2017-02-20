@@ -2,7 +2,7 @@ const path = require('path')
 const chalk = require('chalk')
 const assert = require('assert')
 
-const SlickLoad = require('../')
+const RequireSmart = require('../')
 
 module.exports = [
   testIfViewDoesntFails
@@ -10,5 +10,5 @@ module.exports = [
 
 // Check if view works
 function testIfViewDoesntFails() {
-  SlickLoad.view(__dirname + '/testFolder') 
+  RequireSmart.view(__dirname + '/testFolder') 
 }

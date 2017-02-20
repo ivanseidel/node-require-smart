@@ -2,7 +2,7 @@ const path = require('path')
 const chalk = require('chalk')
 const assert = require('assert')
 
-const SlickLoad = require('../')
+const RequireSmart = require('../')
 
 module.exports = [
   setPropertySucceeds,
@@ -15,7 +15,7 @@ function testIfLoadsFilesFromFolder() {
   const folder = path.join(__dirname, 'testFolder')
 
   // Load tree
-  var loaded = SlickLoad(folder)
+  var loaded = RequireSmart(folder)
 
   // Expectation of result
   var expectation = {
@@ -58,15 +58,15 @@ function setPropertySucceeds() {
   var root = {}
 
   // Set root
-  SlickLoad.loader.setProperty(root, [], {a: 1, b: 2, c: 3})
+  RequireSmart.loader.setProperty(root, [], {a: 1, b: 2, c: 3})
 
   // Set inner element
-  SlickLoad.loader.setProperty(root, ['d'], 4)
-  SlickLoad.loader.setProperty(root, ['e', 'inner'], 5)
-  SlickLoad.loader.setProperty(root, ['f', 'inner', 'other'], 6)
-  SlickLoad.loader.setProperty(root, ['f', 'inner', 'value'], 7)
-  SlickLoad.loader.setProperty(root, ['g'], {other: 8})
-  SlickLoad.loader.setProperty(root, ['g'], {value: 9})
+  RequireSmart.loader.setProperty(root, ['d'], 4)
+  RequireSmart.loader.setProperty(root, ['e', 'inner'], 5)
+  RequireSmart.loader.setProperty(root, ['f', 'inner', 'other'], 6)
+  RequireSmart.loader.setProperty(root, ['f', 'inner', 'value'], 7)
+  RequireSmart.loader.setProperty(root, ['g'], {other: 8})
+  RequireSmart.loader.setProperty(root, ['g'], {value: 9})
 
   // Expectation of result
   var expectation = {
@@ -101,14 +101,14 @@ function setPropertyWithoutMergeEnabled() {
 
   // Set root should fail, because it needs to merge
   assert.throws( () => {
-    SlickLoad.loader.setProperty(root, [], {a: 1, b: 2, c: 3}, opts)
+    RequireSmart.loader.setProperty(root, [], {a: 1, b: 2, c: 3}, opts)
   }, expectedError)
 
   // Sets properties (should pass)
-  SlickLoad.loader.setProperty(root, ['a'], {d: true}, opts)
+  RequireSmart.loader.setProperty(root, ['a'], {d: true}, opts)
 
   // Set root should fail, because it's already set and needs to merge
   assert.throws( () => {
-    SlickLoad.loader.setProperty(root, ['a'], {a: 1, b: 2, c: 3}, opts)
+    RequireSmart.loader.setProperty(root, ['a'], {a: 1, b: 2, c: 3}, opts)
   }, /Cannot load into/)
 }

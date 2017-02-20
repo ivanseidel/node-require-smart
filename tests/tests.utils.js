@@ -2,7 +2,7 @@ const path = require('path')
 const chalk = require('chalk')
 const assert = require('assert')
 
-const SlickLoad = require('../')
+const RequireSmart = require('../')
 
 module.exports = [
   fileName,
@@ -28,7 +28,7 @@ function pathNodesForFile() {
   for (var input in tests) {
     var expectedOutput = tests[input]
 
-    var pathNodes = SlickLoad.utils.pathNodesForFile(input)
+    var pathNodes = RequireSmart.utils.pathNodesForFile(input)
 
     assert.deepEqual(expectedOutput, pathNodes)
   }
@@ -38,7 +38,7 @@ function pathNodesForFile() {
 function listFilesFromPath() {
   const folder = path.join(__dirname, 'testFolder')
 
-  var files = SlickLoad.utils.listFilesFromPath(folder)
+  var files = RequireSmart.utils.listFilesFromPath(folder)
 
   // Expected files
   var expected = [
@@ -58,7 +58,7 @@ function listFilesFromPath() {
 function listFoldersFromPath() {
   const folder = path.join(__dirname, 'testFolder')
 
-  var folders = SlickLoad.utils.listFoldersFromPath(folder)
+  var folders = RequireSmart.utils.listFoldersFromPath(folder)
 
   // Expected files
   var expected = ['a', 'nested']
@@ -79,7 +79,7 @@ function sanitizeName() {
   for (var input in tests) {
     var expectedOutput = tests[input]
 
-    var sanitized = SlickLoad.utils.sanitizeName(input)
+    var sanitized = RequireSmart.utils.sanitizeName(input)
 
     // Compare outputs
     assert(expectedOutput, sanitized)
@@ -101,7 +101,7 @@ function fileName() {
   for (var input in tests) {
     var expectedOutput = tests[input]
 
-    var fileName = SlickLoad.utils.fileName(input)
+    var fileName = RequireSmart.utils.fileName(input)
 
     // Compare outputs
     assert(expectedOutput, fileName)
