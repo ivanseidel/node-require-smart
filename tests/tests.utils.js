@@ -82,8 +82,7 @@ function sanitizeName() {
     let sanitized = SlickLoad.utils.sanitizeName(input)
 
     // Compare outputs
-    if (expectedOutput != sanitized) 
-      return `Was expecting ${chalk.green(expectedOutput)} but got '${chalk.green(sanitized)}'`
+    assert(expectedOutput, sanitized)
   }
 }
 
@@ -105,7 +104,6 @@ function fileName() {
     let fileName = SlickLoad.utils.fileName(input)
 
     // Compare outputs
-    if (expectedOutput != fileName) 
-      return `Was expecting '${chalk.green(expectedOutput)}' but got '${chalk.green(fileName)}'`
+    assert(expectedOutput, fileName)
   }
 }

@@ -24,18 +24,13 @@ process.exit(allTestsOk ? 0 : 1)
 
 // Execute a single test
 function executeTest (test) {
-  let retVal = true;
-  
   try {
-    retVal = test()
-  } catch (e) {
-    retVal = e.stack || e
-  }
-
-  if(retVal === true || retVal === undefined) {
+    test()
     showTestSuccess(test.name)
-  } else {
-    showTestError(test.name, retVal)
+  } catch (e) {
+    let error = e.stack || e
+
+    showTestError(test.name, error)
     allTestsOk = false
   }
 }
