@@ -1,14 +1,14 @@
 {
   "name": "slick-load",
   "version": "1.0.2",
-  "description": "Slicky load your dependencies based on their name and folder",
+  "description": "The smart way of requiring many files",
   "main": "index.js",
   "scripts": {
     "test": "node tests"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivanseidel/slick-load.git"
+    "url": "git+https://github.com/ivanseidel/node-require-smart.git"
   },
   "keywords": [
     "autoload",
@@ -22,9 +22,9 @@
   "author": "Ivan Seidel Gomes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ivanseidel/slick-load/issues"
+    "url": "https://github.com/ivanseidel/node-require-smart/issues"
   },
-  "homepage": "https://github.com/ivanseidel/slick-load#readme",
+  "homepage": "https://github.com/ivanseidel/node-require-smart#readme",
   "devDependencies": {
     "chalk": "^1.1.3"
   }
