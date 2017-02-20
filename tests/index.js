@@ -12,7 +12,7 @@ const tests = [].concat(
 var allTestsOk = true
 
 console.log()
-console.log(chalk.yellow('Testing slick-load'))
+console.log(chalk.yellow('Testing require-smart'))
 console.log()
 
 tests.map( executeTest )
