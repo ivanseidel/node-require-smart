@@ -4,11 +4,13 @@ The smart way of organizing your app's files and folders, by `requiring` recursi
 
 [![NPM][npm-image]][npm-url]
 
-[![Build Status][build-status-image]][build-status-url] [![Dependency Status](https://gemnasium.com/badges/github.com/ivanseidel/node-require-smart.svg)](https://gemnasium.com/github.com/ivanseidel/node-require-smart)
+[![Build Status][build-status-image]][build-status-url] [![Dependency Status][dependencies-image]][dependencies-url]
 
 
-[build-status-image]: https://secure.travis-ci.org/ivanseidel/node-require-smart.png
+[build-status-image]: https://img.shields.io/travis/ivanseidel/node-require-smart.svg
 [build-status-url]: http://travis-ci.org/troygoode/node-require-directory
+[dependencies-image]: https://gemnasium.com/badges/github.com/ivanseidel/node-require-smart.svg
+[dependencies-url]: https://gemnasium.com/github.com/ivanseidel/node-require-smart
 [npm-image]: https://nodei.co/npm/require-smart.png?downloads=true&stars=true
 [npm-url]: https://nodei.co/npm/require-smart
 
