@@ -1,10 +1,9 @@
 ![Require Smart](midia/require-smart.png)
-
-The smart way of organizing your app's files and folders, by `requiring` recursivelly and automagicly parsing file names as their scope key.
-
 <!-- [![NPM][npm-image]][npm-url] -->
 
 [![Build Status][build-status-image]][build-status-url] [![Dependency Status][dependencies-image]][dependencies-url]
+
+The smart way of organizing your app's files and folders, by `requiring` recursivelly and automagicly parsing file names as their scope key.
 
 
 [build-status-image]: https://img.shields.io/travis/ivanseidel/node-require-smart.svg
