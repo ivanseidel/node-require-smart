@@ -134,7 +134,7 @@ RequireSmart.view(__dirname + '/myModulesPath')
 ```
 
 It will print out for each one of the files, the destination hash on the object, and also if it
-will get `merged` or `set`. Like so:
+will get `merged` or `set`. `npm install chalk` to view output with colors.
 
 ![view command](midia/view.png)
 
