@@ -2,7 +2,7 @@
 
 The smart way of organizing your app's files and folders, by `requiring` recursivelly and automagicly parsing file names as their scope key.
 
-[![NPM][npm-image]][npm-url]
+<!-- [![NPM][npm-image]][npm-url] -->
 
 [![Build Status][build-status-image]][build-status-url] [![Dependency Status][dependencies-image]][dependencies-url]
 
