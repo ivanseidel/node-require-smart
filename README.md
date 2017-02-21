@@ -4,7 +4,8 @@ The smart way of organizing your app's files and folders, by `requiring` recursi
 
 [![NPM][npm-image]][npm-url]
 
-[![Build Status][build-status-image]][build-status-url]
+[![Build Status][build-status-image]][build-status-url] [![Dependency Status](https://gemnasium.com/badges/github.com/ivanseidel/node-require-smart.svg)](https://gemnasium.com/github.com/ivanseidel/node-require-smart)
+
 
 [build-status-image]: https://secure.travis-ci.org/ivanseidel/node-require-smart.png
 [build-status-url]: http://travis-ci.org/troygoode/node-require-directory
@@ -148,4 +149,4 @@ be aware of the power you might be giving him. Think about security. Again.
 
 
 ### Creator
-[Ivan Seidel][https://github.com/ivanseidel/node-require-smart]
+[Ivan Seidel](https://github.com/ivanseidel/node-require-smart)
