@@ -1,6 +1,6 @@
 {
   "name": "require-smart",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "The smart way of requiring many files",
   "main": "index.js",
   "scripts": {
