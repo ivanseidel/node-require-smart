@@ -4,6 +4,7 @@ const chalk = require('chalk')
 
 const tests = [].concat(
   require('./tests.view'),
+  require('./tests.package'),
   require('./tests.utils'),
   require('./tests.load')
 )
