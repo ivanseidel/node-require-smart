@@ -32,7 +32,7 @@ This library was created for three main reasons:
 ```javascript
 const RequireSmart = require('require-smart')
 
-const modules = RequireSmart(__dirname + '/myModulesFolder')
+const myModules = RequireSmart('./myModulesFolder')
 ```
 
 You might have this folder structure:
@@ -92,12 +92,12 @@ You will get an object required like this:
 
   queue: {
     opts: {
-      default: require('./queue.opts')
+      default: require('./queue.opts/default')
     }
   },
 
   someOther: {
-    arbitraryName: require('./thing.js')
+    arbitraryName: require('./some_other.arbitrary-name/thing')
   }
 }
 ```

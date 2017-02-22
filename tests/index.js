@@ -6,6 +6,7 @@ const tests = [].concat(
   require('./tests.view'),
   require('./tests.package'),
   require('./tests.utils'),
+  require('./tests.relative'),
   require('./tests.load')
 )
 
