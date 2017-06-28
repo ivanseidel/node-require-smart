@@ -10,6 +10,7 @@ module.exports = [
   pathNodesForFile,
   listFilesFromPath,
   listFoldersFromPath,
+  listFilesFromPathSkipping,
 ]
 
 
@@ -49,6 +50,23 @@ function listFilesFromPath() {
     'index.js',
     'nested.object.here.js',
     'custom-name.weird_name.test.js',
+  ]
+  
+  assert.deepEqual(files.sort(), expected.sort())
+}
+
+// Check listing files from directory skipping specific ones
+function listFilesFromPathSkipping() {
+  const folder = path.join(__dirname, 'testFolder')
+
+  var opts = RequireSmart.utils.normalizeOpts({
+    skip: [/\.js$/]
+  })
+  var files = RequireSmart.utils.listFilesFromPath(folder, opts)
+
+  // Expected files
+  var expected = [
+    'c.json',
   ]
   
   assert.deepEqual(files.sort(), expected.sort())
