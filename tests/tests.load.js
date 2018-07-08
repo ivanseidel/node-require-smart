@@ -15,7 +15,7 @@ function testCustomOptions() {
   const folder = path.join(__dirname, 'testFolder')
 
   // Load tree
-  var loaded = RequireSmart(folder, { uppercaseTokens: '' })
+  var loaded = RequireSmart(folder, { uppercaseTokens: null })
 
   // Expectation of result
   var expectation = {
@@ -44,7 +44,7 @@ function testCustomOptions() {
       }
     },
     'custom-name': {
-      'weird-name': {
+      'weird_name': {
         test: true
       }
     },
