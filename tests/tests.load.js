@@ -8,7 +8,53 @@ module.exports = [
   setPropertySucceeds,
   setPropertyWithoutMergeEnabled,
   testIfLoadsFilesFromFolder,
+  testCustomOptions
 ]
+
+function testCustomOptions() {
+  const folder = path.join(__dirname, 'testFolder')
+
+  // Load tree
+  var loaded = RequireSmart(folder, { uppercaseTokens: null })
+
+  // Expectation of result
+  var expectation = {
+    root: true,
+    a: {
+      index: true,
+      mergingTest: true,
+      success: 'success'
+    },
+    b: {
+      bA: 1,
+      bB: 2,
+      bC: 3,
+    },
+    c: {
+      cA: 1,
+      cB: 2,
+      cC: 3,
+    },
+    nested: {
+      settings: {
+        here: 'nested.settings.here'
+      },
+      object: {
+        here: 'nested.object.here'
+      }
+    },
+    'custom-name': {
+      'weird_name': {
+        test: true
+      }
+    },
+    multipath: {
+      'folder-name': true,
+    }
+  }
+
+  assert.deepEqual(loaded, expectation)
+}
 
 // Check listing from directory
 function testIfLoadsFilesFromFolder() {
